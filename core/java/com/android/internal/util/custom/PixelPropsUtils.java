@@ -35,20 +35,53 @@ public class PixelPropsUtils {
     private static final Map<String, Object> propsToChange;
     private static final Map<String, ArrayList<String>> propsToKeep;
     private static final String[] extraPackagesToChange = {
-        "com.android.vending",
-        "com.breel.wallpapers20"
+         "com.android.vending",
+            "com.breel.wallpapers20",
+            "com.google.android.apps.customization.pixel",
+            "com.google.android.apps.fitness",
+            "com.google.android.apps.recorder",
+            "com.google.android.apps.subscriptions.red",
+            "com.google.android.apps.tachyon",
+            "com.google.android.apps.turboadapter",
+            "com.google.android.apps.wallpaper.pixel",
+            "com.google.android.as",
+            "com.google.android.dialer",
+            "com.google.android.gms.location.history",
+            "com.google.android.inputmethod.latin",
+            "com.google.android.soundpicker",
+            "com.google.pixel.dynamicwallpapers",
+            "com.google.pixel.livewallpaper",
+            "com.google.android.apps.safetyhub",
+            "com.google.android.apps.turbo",
+            "com.google.android.apps.wallpaper",
+            "com.google.android.apps.maps",
+            "com.google.android.gms",
+            "com.google.android.apps.nexuslauncher"
     };
 
     static {
-        propsToKeep = new HashMap<>();
-        propsToKeep.put("com.google.android.settings.intelligence", new ArrayList<String>(Arrays.asList("FINGERPRINT")));
         propsToChange = new HashMap<>();
         propsToChange.put("BRAND", "google");
         propsToChange.put("MANUFACTURER", "Google");
-        propsToChange.put("DEVICE", "redfin");
-        propsToChange.put("PRODUCT", "redfin");
-        propsToChange.put("MODEL", "Pixel 5");
-        propsToChange.put("FINGERPRINT", "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys");
+        propsToChange.put("DEVICE", "raven");
+        propsToChange.put("PRODUCT", "raven");
+        propsToChange.put("MODEL", "Pixel 6 Pro");
+        propsToChange.put("FINGERPRINT", "google/raven/raven:12/SD1A.210817.015.A4/7697517:userdebug/dev-keys");
+        propsToChangePixelXL = new HashMap<>();
+        propsToChangePixelXL.put("BRAND", "google");
+        propsToChangePixelXL.put("MANUFACTURER", "Google");
+        propsToChangePixelXL.put("DEVICE", "marlin");
+        propsToChangePixelXL.put("PRODUCT", "marlin");
+        propsToChangePixelXL.put("MODEL", "Pixel XL");
+        propsToChangePixelXL.put("FINGERPRINT", "google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys");
+        propsToChangePixel3XL = new HashMap<>();
+        propsToChangePixel3XL.put("BRAND", "google");
+        propsToChangePixel3XL.put("MANUFACTURER", "Google");
+        propsToChangePixel3XL.put("DEVICE", "crosshatch");
+        propsToChangePixel3XL.put("PRODUCT", "crosshatch");
+        propsToChangePixel3XL.put("MODEL", "Pixel 3 XL");
+        propsToChangePixel3XL.put("FINGERPRINT", "google/crosshatch/crosshatch:11/RQ3A.211001.001/7641976:user/release-keys");
+>>>>>>> 5d6283d5198d (PixelPropsUtils: Use Pixel 6 props)
     }
 
     public static void setProps(String packageName) {
